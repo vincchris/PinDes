@@ -8,7 +8,6 @@ class ChatBotController extends Controller
 {
     public function index()
     {
-        // Kirim data jika diperlukan
         return Inertia::render('ChatBot', [
         ]);
     }

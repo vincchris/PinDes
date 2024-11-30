@@ -14,7 +14,7 @@ class UmkmTrainingResource extends Resource
 {
     protected static ?string $model = UmkmTraining::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-clipboard-list';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard';
 
     public static function form(Forms\Form $form): Forms\Form
     {

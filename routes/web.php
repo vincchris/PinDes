@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\ChatBotController;
 use App\Http\Controllers\EdukasiController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KonektivitasController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TelemedicineController;
-use App\Http\Controllers\ChatBotController;
 use App\Http\Controllers\umkmController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -37,8 +37,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/edukasi', [EdukasiController::class, 'index'])->name('edukasi');
     Route::get('/konektivitas', [KonektivitasController::class, 'index'])->name('konektivitas');
     Route::get('/pelatihan', [UmkmController::class, 'index'])->name('pelatihan');
-    Route::get('/telemedicine', [TelemedicineController::class, 'index'])->name('telemedicine'); 
-    
+    Route::get('/telemedicine', [TelemedicineController::class, 'index'])->name('telemedicine');
+
 });
 
 require __DIR__ . '/auth.php';
