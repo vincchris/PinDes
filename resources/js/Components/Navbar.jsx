@@ -39,6 +39,14 @@ const Navbar = () => {
                         >
                             Hubungi Kita
                         </Link>
+                    </li> 
+                    <li>
+                        <Link
+                            href="/chatbot"
+                            className="text-gray-800 hover:text-blue-600"
+                        >
+                            ChatBot
+                        </Link>
                     </li>
                     <li>
                         <Link

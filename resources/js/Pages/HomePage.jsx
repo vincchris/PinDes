@@ -4,6 +4,8 @@ import { FaTractor, FaHeartbeat, FaStore, FaMapSigns } from "react-icons/fa";
 import Navbar from "@/Components/Navbar";
 import HeroSection from "@/Components/HeroSection";
 import FeatureCard from "@/Components/FeatureCard";
+import Footer from "@/Components/Footer";
+import Info from "@/Components/InformationHomePage"
 
 const features = [
     {
@@ -48,6 +50,7 @@ const Home = () => (
     <>
         <Navbar />
         <HeroSection />
+        <Info />
         <section id="features" className="py-20 bg-gray-100">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-10">
@@ -69,6 +72,7 @@ const Home = () => (
                 </div>
             </div>
         </section>
+        <Footer />
     </>
 );
 

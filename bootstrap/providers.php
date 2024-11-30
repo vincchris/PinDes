@@ -2,6 +2,6 @@
 
 return [
     App\Providers\AppServiceProvider::class,
-
-    \Chatify\ChatifyServiceProvider::class,
+    App\Providers\Filament\AdminPanelProvider::class,
+    Chatify\ChatifyServiceProvider::class,
 ];
