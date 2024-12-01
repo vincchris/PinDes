@@ -18,7 +18,7 @@ const Navbar = () => {
                 <ul className="flex space-x-6 items-center">
                     <li>
                         <Link
-                            href="#home"
+                            href="/HomePage"
                             className="text-gray-800 hover:text-blue-600"
                         >
                             Home

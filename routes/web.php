@@ -28,13 +28,14 @@ Route::get('/HomePage', [HomeController::class, 'index'])->name('home');
 
 Route::get('/Chatbot', [ChatBotController::class, 'index'])->name('chatbot');
 
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Other routes for authenticated users
-    Route::get('/edukasi', [EdukasiController::class, 'index'])->name('edukasi');
+    Route::get('/EdukasiPage', [EdukasiController::class, 'index'])->name('edukasi');
     Route::get('/konektivitas', [KonektivitasController::class, 'index'])->name('konektivitas');
     Route::get('/pelatihan', [UmkmController::class, 'index'])->name('pelatihan');
     Route::get('/telemedicine', [TelemedicineController::class, 'index'])->name('telemedicine');

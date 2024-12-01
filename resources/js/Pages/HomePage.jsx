@@ -14,7 +14,7 @@ const features = [
             "Edukasi pertanian dan peternakan menyediakan panduan praktis bagi petani dan peternak tentang teknik budidaya modern, penggunaan teknologi tepat guna, serta praktik berkelanjutan. Ini mencakup tutorial langkah demi langkah tentang pertanian organik, pemeliharaan ternak, dan pengelolaan sumber daya untuk meningkatkan hasil dan kesejahteraan hewan.",
         icon: <FaTractor className="text-green-600 text-4xl mb-4" />,
         image: "/assets/images/ImgPertanian.jpg",
-        link: "/edukasi-pertanian",
+        link: "/edukasi-page",
         reverse: false,
     },
     {

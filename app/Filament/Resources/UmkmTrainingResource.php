@@ -24,6 +24,10 @@ class UmkmTrainingResource extends Resource
                 Forms\Components\Textarea::make('description')->required(),
                 Forms\Components\RichEditor::make('content')->required(),
                 Forms\Components\DatePicker::make('date')->required(),
+                Forms\Components\FileUpload::make('image') // Tambahkan komponen untuk upload gambar
+                    ->image() // Memastikan hanya menerima file gambar
+                    ->directory('umkm-trainings/images') // Lokasi penyimpanan gambar
+                    ->required(), // Bersifat wajib
             ]);
     }
 
@@ -35,6 +39,9 @@ class UmkmTrainingResource extends Resource
                 Tables\Columns\TextColumn::make('description')->limit(50),
                 Tables\Columns\TextColumn::make('date')->date(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
+                Tables\Columns\ImageColumn::make('image') // Tampilkan kolom gambar di tabel
+                    ->disk('public') // Disk yang digunakan untuk penyimpanan
+                    ->label('Image'),
             ])
             ->filters([]);
     }

@@ -9,12 +9,14 @@ class UmkmTraining extends Model
 {
     use HasFactory;
 
+    // Kolom yang dapat diisi secara mass-assignment
     protected $fillable = [
         'title',
         'description',
         'content',
         'date',
         'created_by',
+        'image', 
     ];
 
     public function creator()
