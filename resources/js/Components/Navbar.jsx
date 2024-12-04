@@ -26,7 +26,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
-                            href="#features"
+                            href="/Layanan"
                             className="text-gray-800 hover:text-blue-600"
                         >
                             Layanan
@@ -34,7 +34,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
-                            href="#about"
+                            href="/Contactus"
                             className="text-gray-800 hover:text-blue-600"
                         >
                             Hubungi Kita
@@ -42,7 +42,7 @@ const Navbar = () => {
                     </li> 
                     <li>
                         <Link
-                            href="/chatbot"
+                            href="/Chatbot"
                             className="text-gray-800 hover:text-blue-600"
                         >
                             ChatBot

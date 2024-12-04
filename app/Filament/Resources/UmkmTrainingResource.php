@@ -59,4 +59,11 @@ class UmkmTrainingResource extends Resource
             'edit' => Pages\EditUmkmTraining::route('/{record}/edit'),
         ];
     }
+
+    public static function afterCreate($record)
+    {
+        // Menetapkan created_by pada record yang baru dibuat
+        $record->created_by = auth()->id(); // ID user yang login
+        $record->save();
+    }
 }

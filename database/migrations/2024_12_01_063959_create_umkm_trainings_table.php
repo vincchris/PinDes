@@ -15,17 +15,16 @@ class CreateUmkmTrainingsTable extends Migration
             $table->text('content');
             $table->date('date');
             $table->timestamps();
-            $table->foreignId('created_by')->constrained('users')->onDelete('cascade');
+            $table->foreignId('created_by')->constrained('id')->on('users')->onDelete('set null');
             $table->string('image')->nullable();
+            $table->unsignedBigInteger('created_by')->nullable()->change();
         });
     }
 
     public function down()
     {
         Schema::dropIfExists('umkm_trainings');
-        
-        Schema::table('umkm_trainings', function (Blueprint $table) {
-            $table->dropColumn('image'); 
-        });
-    }
+        Schema::dropForeign(['created_by']);
+        Schema::dropColumn('created_by');
+        }
 }

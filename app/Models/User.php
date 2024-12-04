@@ -10,6 +10,9 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    /**
+     * Fields that are mass assignable.
+     */
     protected $fillable = [
         'name',
         'email',
@@ -17,11 +20,25 @@ class User extends Authenticatable
         'role',
     ];
 
+    /**
+     * Fields that should be hidden for serialization.
+     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
+    /**
+     * The attributes that should be cast to native types.
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed', // Laravel 10+ supports automatic password hashing
+    ];
+
+    /**
+     * Relations
+     */
     public function educationMaterials()
     {
         return $this->hasMany(EducationMaterial::class, 'created_by');

@@ -11,6 +11,7 @@ use Filament\Tables;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
+use Illuminate\Support\Facades\Hash; // Gunakan Hash untuk hashing password
 
 class UserResource extends Resource
 {
@@ -31,8 +32,10 @@ class UserResource extends Resource
                 TextInput::make('password')
                     ->password()
                     ->required()
-                    ->label('Password'),
-                Select::make('role') // Use Select instead of TextInput for roles
+                    ->label('Password')
+                    ->dehydrateStateUsing(fn ($state) => !empty($state) ? Hash::make($state) : null) // Hash password
+                    ->hiddenOn('edit'), 
+                Select::make('role') 
                     ->options([
                         'admin' => 'Admin',
                         'user' => 'User',
@@ -58,7 +61,6 @@ class UserResource extends Resource
     {
         return [
             'index' => Pages\ListUsers::route('/'),
-            'create' => Pages\CreateUser::route('/create'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
     }

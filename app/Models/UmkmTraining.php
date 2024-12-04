@@ -15,9 +15,22 @@ class UmkmTraining extends Model
         'description',
         'content',
         'date',
-        'created_by',
         'image', 
+        'created_by',
+        
     ];
+
+    protected static function booted()
+    {
+        static::saved(function ($umkmTraining) {
+            // Menetapkan created_by setelah record disimpan
+            if (!$umkmTraining->created_by) {
+                $umkmTraining->update([
+                    'created_by' => auth()->id(),
+                ]);
+            }
+        });
+    }
 
     public function creator()
     {

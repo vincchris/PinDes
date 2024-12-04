@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Inertia\Inertia;
 
-class ChatBotController extends Controller
+class ContactController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Chatbot', [
+        return Inertia::render('Contactus', [
         ]);
     }
 }
