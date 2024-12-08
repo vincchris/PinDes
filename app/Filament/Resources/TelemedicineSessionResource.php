@@ -61,7 +61,6 @@ class TelemedicineSessionResource extends Resource
     {
         return [
             'index' => Pages\ListTelemedicineSessions::route('/'),
-            'create' => Pages\CreateTelemedicineSession::route('/create'),
             'edit' => Pages\EditTelemedicineSession::route('/{record}/edit'),
         ];
     }

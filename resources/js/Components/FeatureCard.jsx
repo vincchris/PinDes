@@ -1,35 +1,40 @@
+import React from "react";
 import { Link } from "@inertiajs/react";
-import { motion } from "framer-motion";
+import ScrollAnimationWrapper from "../components/ScrollAnimationWrapper";
 
-const FeatureCard = ({ title, description, icon, image, reverse, link }) => {
+const FeatureCard = ({ title, description, icon, image, link, reverse }) => {
     return (
-        <motion.div
-            className={`flex items-center bg-white rounded-lg shadow-lg p-4 ${
-                reverse ? "flex-row-reverse" : ""
-            }`}
-            whileHover={{ scale: 1.05 }}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-        >
-            <div className="flex-1 p-4">
-                <div className="flex items-center mb-4">
-                    <span className="text-4xl text-blue-600">{icon}</span>
-                    <h3 className="text-xl font-bold ml-4">{title}</h3>
+        <ScrollAnimationWrapper>
+            <div
+                className={`flex ${reverse ? "flex-row-reverse" : "flex-row"} items-center bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-200 hover:scale-105 hover:shadow-2xl`}
+            >
+                {/* Gambar */}
+                <div className="w-2/5">
+                    <img
+                        src={image}
+                        alt={title}
+                        className="w-full h-auto max-h-[300px] object-cover object-center"
+                    />
                 </div>
-                <p className="mb-4">{description}</p>
-                <Link to={link} className="mt-2 text-blue-500 hover:underline">
-                    Lihat Selengkapnya
-                </Link>
+
+                {/* Konten */}
+                <div className="w-3/5 p-8">
+                    {/* Judul dan Ikon */}
+                    <div className="flex items-center mb-4">
+                        <div className="text-4xl text-green-600 mr-4">{icon}</div> {/* Ikon di samping */}
+                        <h3 className="text-3xl font-bold">{title}</h3> {/* Judul */}
+                    </div>
+                    <p className="text-gray-600 mb-6">{description}</p>
+                    {link && (
+                        <Link href={link}>
+                            <a className="text-blue-500 hover:underline font-semibold">
+                                Lihat Selengkapnya
+                            </a>
+                        </Link>
+                    )}
+                </div>
             </div>
-            <div className="flex-1">
-                <img
-                    src={image}
-                    alt={title}
-                    className="w-full h-auto rounded-lg"
-                />
-            </div>
-        </motion.div>
+        </ScrollAnimationWrapper>
     );
 };
 

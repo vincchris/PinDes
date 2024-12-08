@@ -14,7 +14,7 @@ const features = [
             "Edukasi pertanian dan peternakan menyediakan panduan praktis bagi petani dan peternak tentang teknik budidaya modern, penggunaan teknologi tepat guna, serta praktik berkelanjutan. Ini mencakup tutorial langkah demi langkah tentang pertanian organik, pemeliharaan ternak, dan pengelolaan sumber daya untuk meningkatkan hasil dan kesejahteraan hewan.",
         icon: <FaTractor className="text-green-600 text-4xl mb-4" />,
         image: "/assets/images/ImgPertanian.jpg",
-        link: "/edukasi-page",
+        link: "/EdukasiPage",
         reverse: false,
     },
     {
@@ -23,7 +23,7 @@ const features = [
             "Telemedicine memungkinkan layanan kesehatan jarak jauh melalui teknologi digital. Pasien dapat berkonsultasi dengan dokter tanpa harus datang ke klinik atau rumah sakit. Ini memberikan akses cepat ke diagnosa, perawatan, dan edukasi kesehatan, terutama untuk masyarakat di daerah terpencil.",
         icon: <FaHeartbeat className="text-red-600 text-4xl mb-4" />,
         image: "/assets/images/ImageDoctors.jpg",
-        link: "/telemedicine",
+        link: "/TelemedicinePage",
         reverse: true,
     },
     {
@@ -32,7 +32,7 @@ const features = [
             "Pelatihan UMKM (Usaha Mikro, Kecil, dan Menengah) memberikan panduan dan pengetahuan bagi para pelaku usaha kecil untuk mengelola bisnis mereka dengan lebih efisien. Materi pelatihan mencakup manajemen keuangan, pemasaran digital, strategi bisnis, dan cara memanfaatkan peluang pasar untuk mengembangkan usaha secara berkelanjutan.",
         icon: <FaStore className="text-blue-600 text-4xl mb-4" />,
         image: "/assets/images/ImgBussiness.jpg",
-        link: "/pelatihan-umkm",
+        link: "/UmkmPage",
         reverse: false,
     },
     {
@@ -41,7 +41,7 @@ const features = [
             "Konektivitas antar desa dan pemerintah adalah inisiatif untuk meningkatkan komunikasi dan kerjasama antara desa-desa dengan pihak pemerintah. Platform ini memungkinkan desa-desa untuk mempromosikan potensi lokal, berbagi informasi, serta mengakses program-program pembangunan desa melalui forum interaktif dan peta digital yang memperkuat hubungan antara masyarakat dan pemerintah.",
         icon: <FaMapSigns className="text-orange-600 text-4xl mb-4" />,
         image: "/assets/images/ImageGovernment.jpg",
-        link: "/konektivitas-desa",
+        link: "/VillagePage",
         reverse: true,
     },
 ];

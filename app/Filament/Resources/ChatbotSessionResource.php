@@ -63,7 +63,6 @@ class ChatbotSessionResource extends Resource
     {
         return [
             'index' => Pages\ListChatbotSessions::route('/'),
-            'create' => Pages\CreateChatbotSession::route('/create'),
             'edit' => Pages\EditChatbotSession::route('/{record}/edit'),
         ];
     }

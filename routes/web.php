@@ -43,9 +43,9 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/EdukasiPage', [EdukasiController::class, 'index'])->name('edukasi');
-    Route::get('/konektivitas', [KonektivitasController::class, 'index'])->name('konektivitas');
-    Route::get('/pelatihan', [UmkmController::class, 'index'])->name('pelatihan');
-    Route::get('/telemedicine', [TelemedicineController::class, 'index'])->name('telemedicine');
+    Route::get('/VillagePage', [KonektivitasController::class, 'index'])->name('konektivitas');
+    Route::get('/UmkmPage', [UmkmController::class, 'index'])->name('pelatihan');
+    Route::get('/TelemedicinePage', [TelemedicineController::class, 'index'])->name('telemedicine');
 
 });
 
